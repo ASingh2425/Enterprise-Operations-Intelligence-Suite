@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" width="100%" height="100%" style="background-color: #0f172a; font-family: Inter, sans-serif;">
+  <defs>
+    <linearGradient id="cyan-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Title -->
+  <text x="500" y="45" font-size="22" font-weight="bold" fill="#f8fafc" text-anchor="middle">Enterprise Operations Intelligence Suite — Component Architecture</text>
+  <text x="500" y="70" font-size="13" fill="#94a3b8" text-anchor="middle">End-to-End Data Pipeline from Synthetic Ingestion to Power BI &amp; Interactive Web UI</text>
+
+  <!-- Node 1: Generator -->
+  <g transform="translate(60, 130)" filter="url(#shadow)">
+    <rect width="240" height="110" rx="12" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <rect width="240" height="6" rx="3" fill="#38bdf8"/>
+    <text x="20" y="35" font-size="15" font-weight="bold" fill="#38bdf8">1. Synthetic Generator</text>
+    <text x="20" y="60" font-size="12" fill="#cbd5e1">• python/generate_raw_data.py</text>
+    <text x="20" y="80" font-size="12" fill="#cbd5e1">• 520,000 Order Line Items</text>
+    <text x="20" y="98" font-size="11" fill="#94a3b8">Outputs: data/raw/*.csv</text>
+  </g>
+
+  <!-- Arrow 1 -> 2 -->
+  <path d="M 300 185 L 370 185" stroke="#38bdf8" stroke-width="3" fill="none" marker-end="url(#arrow)" stroke-dasharray="4"/>
+
+  <!-- Node 2: Python ETL & ML -->
+  <g transform="translate(380, 130)" filter="url(#shadow)">
+    <rect width="240" height="110" rx="12" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <rect width="240" height="6" rx="3" fill="#818cf8"/>
+    <text x="20" y="35" font-size="15" font-weight="bold" fill="#818cf8">2. Python ETL &amp; Analytics</text>
+    <text x="20" y="60" font-size="12" fill="#cbd5e1">• Holt-Winters Demand Forecast</text>
+    <text x="20" y="80" font-size="12" fill="#cbd5e1">• RFM Segmentation &amp; EOQ</text>
+    <text x="20" y="98" font-size="11" fill="#94a3b8">Outputs: data/processed/*.csv</text>
+  </g>
+
+  <!-- Arrow 2 -> 3 -->
+  <path d="M 620 185 L 690 185" stroke="#818cf8" stroke-width="3" fill="none" stroke-dasharray="4"/>
+
+  <!-- Node 3: SQL Engine -->
+  <g transform="translate(700, 130)" filter="url(#shadow)">
+    <rect width="240" height="110" rx="12" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <rect width="240" height="6" rx="3" fill="#34d399"/>
+    <text x="20" y="35" font-size="15" font-weight="bold" fill="#34d399">3. SQL Relational Database</text>
+    <text x="20" y="60" font-size="12" fill="#cbd5e1">• SQLite / PostgreSQL DDL</text>
+    <text x="20" y="80" font-size="12" fill="#cbd5e1">• Star Schema &amp; FK Indexes</text>
+    <text x="20" y="98" font-size="11" fill="#94a3b8">data/ops_intelligence.db</text>
+  </g>
+
+  <!-- Down Arrows -->
+  <path d="M 500 240 L 500 310" stroke="#34d399" stroke-width="3" fill="none"/>
+
+  <!-- Bottom Row: Presentation Layer -->
+  <g transform="translate(220, 320)" filter="url(#shadow)">
+    <rect width="260" height="120" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+    <text x="20" y="35" font-size="15" font-weight="bold" fill="#38bdf8">4A. Power BI Semantic Model</text>
+    <text x="20" y="60" font-size="12" fill="#cbd5e1">• Operations_Intelligence.pbip</text>
+    <text x="20" y="80" font-size="12" fill="#cbd5e1">• theme.json (Dark Glassmorphism)</text>
+    <text x="20" y="100" font-size="12" fill="#cbd5e1">• 30+ Advanced DAX Measures</text>
+  </g>
+
+  <g transform="translate(520, 320)" filter="url(#shadow)">
+    <rect width="260" height="120" rx="12" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+    <text x="20" y="35" font-size="15" font-weight="bold" fill="#34d399">4B. Interactive Web App UI</text>
+    <text x="20" y="60" font-size="12" fill="#cbd5e1">• index.html / styles.css / app.js</text>
+    <text x="20" y="80" font-size="12" fill="#cbd5e1">• Chart.js 10-Page Dashboard</text>
+    <text x="20" y="100" font-size="12" fill="#cbd5e1">• Live GitHub Pages / Vercel</text>
+  </g>
+
+</svg>

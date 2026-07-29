@@ -1,0 +1,101 @@
+ProductID,SKU,Category,SubCategory,Brand,Cost,SellingPrice,Margin
+PROD-0001,SKU-TEC-MON-0001,Technology,Monitors,AmazonBasics,189.24,284.19,0.3341
+PROD-0002,SKU-OFF-ENV-0002,Office Supplies,Envelopes,ProTech,872.7,1341.38,0.3494
+PROD-0003,SKU-FUR-STO-0003,Furniture,Storage Systems,ApexCorp,180.2,243.55,0.2601
+PROD-0004,SKU-TEC-AUD-0004,Technology,Audio & Headphones,ProTech,712.33,1068.92,0.3336
+PROD-0005,SKU-TEC-MON-0005,Technology,Monitors,FlexiWorkspace,606.56,857.21,0.2924
+PROD-0006,SKU-TEC-ACC-0006,Technology,Accessories,FlexiWorkspace,690.76,845.69,0.1832
+PROD-0007,SKU-FUR-STO-0007,Furniture,Storage Systems,OmniSupplies,876.85,1505.84,0.4177
+PROD-0008,SKU-OFF-BIN-0008,Office Supplies,Binders,FlexiWorkspace,108.71,163.42,0.3348
+PROD-0009,SKU-LOG-PAL-0009,Logistics Gear,Pallet Jacks,IndustrialPlus,943.36,1193.67,0.2097
+PROD-0010,SKU-OFF-STO-0010,Office Supplies,Storage Boxes,LogiTech,229.31,418.14,0.4516
+PROD-0011,SKU-FUR-DES-0011,Furniture,Desks,IndustrialPlus,779.07,1693.63,0.54
+PROD-0012,SKU-TEC-AUD-0012,Technology,Audio & Headphones,GlobalGear,373.21,485.26,0.2309
+PROD-0013,SKU-LOG-IND-0013,Logistics Gear,Industrial Scales,IndustrialPlus,917.48,1262.53,0.2733
+PROD-0014,SKU-FUR-DES-0014,Furniture,Desks,FlexiWorkspace,927.42,1218.37,0.2388
+PROD-0015,SKU-FUR-DES-0015,Furniture,Desks,GlobalGear,619.62,1047.01,0.4082
+PROD-0016,SKU-LOG-PAC-0016,Logistics Gear,Packaging Tape,OmniSupplies,38.17,54.09,0.2943
+PROD-0017,SKU-TEC-AUD-0017,Technology,Audio & Headphones,IndustrialPlus,681.51,1014.76,0.3284
+PROD-0018,SKU-TEC-LAP-0018,Technology,Laptops,GlobalGear,424.57,597.06,0.2889
+PROD-0019,SKU-LOG-BAR-0019,Logistics Gear,Barcode Scanners,LogiTech,573.1,1020.11,0.4382
+PROD-0020,SKU-OFF-STO-0020,Office Supplies,Storage Boxes,GlobalGear,602.52,857.07,0.297
+PROD-0021,SKU-OFF-PEN-0021,Office Supplies,Pens & Stationery,OmniSupplies,255.8,417.97,0.388
+PROD-0022,SKU-LOG-PAC-0022,Logistics Gear,Packaging Tape,FlexiWorkspace,172.4,228.68,0.2461
+PROD-0023,SKU-TEC-AUD-0023,Technology,Audio & Headphones,OmniSupplies,135.43,244.41,0.4459
+PROD-0024,SKU-LOG-IND-0024,Logistics Gear,Industrial Scales,IndustrialPlus,49.14,85.68,0.4265
+PROD-0025,SKU-TEC-MON-0025,Technology,Monitors,IndustrialPlus,106.17,168.85,0.3712
+PROD-0026,SKU-LOG-BAR-0026,Logistics Gear,Barcode Scanners,ProTech,640.01,1023.2,0.3745
+PROD-0027,SKU-FUR-LIG-0027,Furniture,Lighting,OmniSupplies,764.88,1495.95,0.4887
+PROD-0028,SKU-LOG-BAR-0028,Logistics Gear,Barcode Scanners,OmniSupplies,345.38,699.15,0.506
+PROD-0029,SKU-LOG-IND-0029,Logistics Gear,Industrial Scales,ProTech,183.89,275.49,0.3325
+PROD-0030,SKU-LOG-PAL-0030,Logistics Gear,Pallet Jacks,ApexCorp,221.51,329.87,0.3285
+PROD-0031,SKU-LOG-LAB-0031,Logistics Gear,Label Printers,ApexCorp,535.11,759.56,0.2955
+PROD-0032,SKU-LOG-PAL-0032,Logistics Gear,Pallet Jacks,IndustrialPlus,792.15,1308.26,0.3945
+PROD-0033,SKU-LOG-BAR-0033,Logistics Gear,Barcode Scanners,FlexiWorkspace,226.37,330.61,0.3153
+PROD-0034,SKU-LOG-PAL-0034,Logistics Gear,Pallet Jacks,ApexCorp,695.42,909.05,0.235
+PROD-0035,SKU-LOG-PAC-0035,Logistics Gear,Packaging Tape,IndustrialPlus,813.74,1392.44,0.4156
+PROD-0036,SKU-TEC-ACC-0036,Technology,Accessories,ProTech,79.09,132.66,0.4038
+PROD-0037,SKU-TEC-ACC-0037,Technology,Accessories,LogiTech,13.99,23.36,0.401
+PROD-0038,SKU-LOG-PAC-0038,Logistics Gear,Packaging Tape,GlobalGear,794.13,1322.23,0.3994
+PROD-0039,SKU-OFF-PEN-0039,Office Supplies,Pens & Stationery,GlobalGear,896.09,1890.88,0.5261
+PROD-0040,SKU-FUR-DES-0040,Furniture,Desks,ApexCorp,98.51,200.02,0.5075
+PROD-0041,SKU-OFF-STO-0041,Office Supplies,Storage Boxes,OmniSupplies,624.56,1253.13,0.5016
+PROD-0042,SKU-OFF-BIN-0042,Office Supplies,Binders,ApexCorp,866.48,1231.67,0.2965
+PROD-0043,SKU-FUR-BOO-0043,Furniture,Bookcases,FlexiWorkspace,654.7,1271.51,0.4851
+PROD-0044,SKU-TEC-AUD-0044,Technology,Audio & Headphones,AmazonBasics,156.69,234.67,0.3323
+PROD-0045,SKU-LOG-LAB-0045,Logistics Gear,Label Printers,ProTech,544.52,697.39,0.2192
+PROD-0046,SKU-LOG-PAL-0046,Logistics Gear,Pallet Jacks,ProTech,715.45,899.15,0.2043
+PROD-0047,SKU-TEC-AUD-0047,Technology,Audio & Headphones,LogiTech,209.02,433.47,0.5178
+PROD-0048,SKU-TEC-SMA-0048,Technology,Smartphones,GlobalGear,39.58,48.76,0.1883
+PROD-0049,SKU-OFF-BIN-0049,Office Supplies,Binders,OmniSupplies,929.98,2056.57,0.5478
+PROD-0050,SKU-OFF-BIN-0050,Office Supplies,Binders,IndustrialPlus,791.79,1363.27,0.4192
+PROD-0051,SKU-LOG-LAB-0051,Logistics Gear,Label Printers,OmniSupplies,872.39,1528.63,0.4293
+PROD-0052,SKU-OFF-PAP-0052,Office Supplies,Paper & Printing,GlobalGear,924.71,1293.66,0.2852
+PROD-0053,SKU-LOG-LAB-0053,Logistics Gear,Label Printers,LogiTech,84.96,127.22,0.3322
+PROD-0054,SKU-FUR-LIG-0054,Furniture,Lighting,GlobalGear,668.45,1349.31,0.5046
+PROD-0055,SKU-FUR-LIG-0055,Furniture,Lighting,FlexiWorkspace,331.45,554.08,0.4018
+PROD-0056,SKU-LOG-LAB-0056,Logistics Gear,Label Printers,OmniSupplies,63.89,115.68,0.4477
+PROD-0057,SKU-OFF-PEN-0057,Office Supplies,Pens & Stationery,OmniSupplies,914.45,1974.2,0.5368
+PROD-0058,SKU-FUR-OFF-0058,Furniture,Office Chairs,ApexCorp,767.09,979.18,0.2166
+PROD-0059,SKU-OFF-BIN-0059,Office Supplies,Binders,ApexCorp,865.49,1187.39,0.2711
+PROD-0060,SKU-FUR-LIG-0060,Furniture,Lighting,FlexiWorkspace,439.42,613.12,0.2833
+PROD-0061,SKU-OFF-BIN-0061,Office Supplies,Binders,AmazonBasics,738.72,1608.71,0.5408
+PROD-0062,SKU-OFF-PEN-0062,Office Supplies,Pens & Stationery,FlexiWorkspace,502.83,1072.13,0.531
+PROD-0063,SKU-LOG-LAB-0063,Logistics Gear,Label Printers,ApexCorp,285.83,568.25,0.497
+PROD-0064,SKU-LOG-PAC-0064,Logistics Gear,Packaging Tape,OmniSupplies,254.64,435.65,0.4155
+PROD-0065,SKU-LOG-LAB-0065,Logistics Gear,Label Printers,FlexiWorkspace,149.62,299.9,0.5011
+PROD-0066,SKU-FUR-BOO-0066,Furniture,Bookcases,LogiTech,538.27,659.48,0.1838
+PROD-0067,SKU-LOG-PAL-0067,Logistics Gear,Pallet Jacks,ApexCorp,38.32,63.01,0.3918
+PROD-0068,SKU-OFF-PEN-0068,Office Supplies,Pens & Stationery,OmniSupplies,586.02,772.2,0.2411
+PROD-0069,SKU-FUR-DES-0069,Furniture,Desks,ProTech,607.16,786.99,0.2285
+PROD-0070,SKU-FUR-LIG-0070,Furniture,Lighting,OmniSupplies,407.1,643.33,0.3672
+PROD-0071,SKU-LOG-PAL-0071,Logistics Gear,Pallet Jacks,OmniSupplies,275.7,458.81,0.3991
+PROD-0072,SKU-TEC-MON-0072,Technology,Monitors,GlobalGear,450.34,740.69,0.392
+PROD-0073,SKU-TEC-MON-0073,Technology,Monitors,IndustrialPlus,223.34,392.58,0.4311
+PROD-0074,SKU-OFF-STO-0074,Office Supplies,Storage Boxes,GlobalGear,913.51,1576.92,0.4207
+PROD-0075,SKU-FUR-BOO-0075,Furniture,Bookcases,AmazonBasics,873.82,1216.68,0.2818
+PROD-0076,SKU-LOG-PAL-0076,Logistics Gear,Pallet Jacks,ApexCorp,398.37,688.51,0.4214
+PROD-0077,SKU-TEC-SMA-0077,Technology,Smartphones,GlobalGear,582.95,818.98,0.2882
+PROD-0078,SKU-OFF-STO-0078,Office Supplies,Storage Boxes,IndustrialPlus,815.18,1379.79,0.4092
+PROD-0079,SKU-LOG-BAR-0079,Logistics Gear,Barcode Scanners,LogiTech,155.0,204.08,0.2405
+PROD-0080,SKU-TEC-LAP-0080,Technology,Laptops,OmniSupplies,378.63,648.12,0.4158
+PROD-0081,SKU-TEC-ACC-0081,Technology,Accessories,LogiTech,308.81,427.24,0.2772
+PROD-0082,SKU-LOG-IND-0082,Logistics Gear,Industrial Scales,AmazonBasics,730.72,1249.52,0.4152
+PROD-0083,SKU-LOG-PAL-0083,Logistics Gear,Pallet Jacks,FlexiWorkspace,62.86,124.87,0.4966
+PROD-0084,SKU-LOG-PAL-0084,Logistics Gear,Pallet Jacks,GlobalGear,900.08,1627.63,0.447
+PROD-0085,SKU-LOG-BAR-0085,Logistics Gear,Barcode Scanners,ProTech,637.94,849.0,0.2486
+PROD-0086,SKU-LOG-BAR-0086,Logistics Gear,Barcode Scanners,IndustrialPlus,680.39,1369.55,0.5032
+PROD-0087,SKU-FUR-OFF-0087,Furniture,Office Chairs,ProTech,323.3,423.5,0.2366
+PROD-0088,SKU-LOG-IND-0088,Logistics Gear,Industrial Scales,ApexCorp,248.52,389.35,0.3617
+PROD-0089,SKU-LOG-IND-0089,Logistics Gear,Industrial Scales,AmazonBasics,423.36,885.88,0.5221
+PROD-0090,SKU-LOG-PAC-0090,Logistics Gear,Packaging Tape,GlobalGear,161.62,350.66,0.5391
+PROD-0091,SKU-FUR-LIG-0091,Furniture,Lighting,ProTech,795.33,1063.56,0.2522
+PROD-0092,SKU-TEC-ACC-0092,Technology,Accessories,IndustrialPlus,348.96,484.06,0.2791
+PROD-0093,SKU-FUR-LIG-0093,Furniture,Lighting,GlobalGear,434.14,783.22,0.4457
+PROD-0094,SKU-FUR-LIG-0094,Furniture,Lighting,OmniSupplies,384.58,502.26,0.2343
+PROD-0095,SKU-TEC-LAP-0095,Technology,Laptops,ProTech,764.68,1108.55,0.3102
+PROD-0096,SKU-OFF-ENV-0096,Office Supplies,Envelopes,GlobalGear,164.32,344.92,0.5236
+PROD-0097,SKU-LOG-IND-0097,Logistics Gear,Industrial Scales,FlexiWorkspace,910.19,1326.03,0.3136
+PROD-0098,SKU-OFF-BIN-0098,Office Supplies,Binders,AmazonBasics,913.44,1150.72,0.2062
+PROD-0099,SKU-LOG-IND-0099,Logistics Gear,Industrial Scales,AmazonBasics,75.1,130.86,0.4261
+PROD-0100,SKU-OFF-STO-0100,Office Supplies,Storage Boxes,GlobalGear,852.73,1724.43,0.5055

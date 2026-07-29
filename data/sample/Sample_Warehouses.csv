@@ -1,0 +1,16 @@
+WarehouseID,WarehouseName,City,Country,Region,CapacityUnits,OperatingCost
+WH-US-EAST-1,New Jersey Fulfillment Center,Edison,United States,North America,850000,190000.0
+WH-US-EAST-2,Atlanta Hub,Atlanta,United States,North America,650000,145000.0
+WH-US-WEST-1,Seattle Mega Hub,Seattle,United States,North America,950000,220000.0
+WH-US-WEST-2,Phoenix Express Center,Phoenix,United States,North America,550000,130000.0
+WH-US-CENT-1,Chicago Distribution Center,Chicago,United States,North America,750000,175000.0
+WH-CA-EAST-1,Toronto Logistics Depot,Toronto,Canada,North America,450000,110000.0
+WH-EU-CENT-1,Frankfurt European Hub,Frankfurt,Germany,Europe,900000,210000.0
+WH-EU-WEST-1,Paris Fulfillment Park,Paris,France,Europe,600000,150000.0
+WH-UK-LOND-1,London Gateway Depot,London,United Kingdom,Europe,550000,140000.0
+WH-UK-MANC-1,Manchester Regional Hub,Manchester,United Kingdom,Europe,400000,105000.0
+WH-APAC-SYD-1,Sydney Express Depot,Sydney,Australia,APAC,450000,115000.0
+WH-APAC-MELB-1,Melbourne Distribution Hub,Melbourne,Australia,APAC,350000,95000.0
+WH-APAC-TYO-1,Tokyo Central Fulfillment,Tokyo,Japan,APAC,700000,180000.0
+WH-APAC-OSAK-1,Osaka West Depot,Osaka,Japan,APAC,400000,105000.0
+WH-APAC-SING-1,Singapore South Hub,Singapore,Singapore,APAC,500000,135000.0

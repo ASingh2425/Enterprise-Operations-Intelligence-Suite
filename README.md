@@ -3,43 +3,54 @@
 [![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge&logo=github)](https://github.com/ASingh2425/Enterprise-Operations-Intelligence-Suite)
 [![Power BI](https://img.shields.io/badge/Power_BI-Dark_Navy_Theme-yellow?style=for-the-badge&logo=powerbi)](https://github.com/ASingh2425/Enterprise-Operations-Intelligence-Suite)
 [![Python](https://img.shields.io/badge/Python-3.11+-blue?style=for-the-badge&logo=python)](https://github.com/ASingh2425/Enterprise-Operations-Intelligence-Suite)
-[![SQL](https://img.shields.io/badge/SQL-PostgreSQL%2FSnowflake-orange?style=for-the-badge&logo=postgresql)](https://github.com/ASingh2425/Enterprise-Operations-Intelligence-Suite)
+[![SQL Database](https://img.shields.io/badge/SQL-SQLite%2FPostgreSQL-orange?style=for-the-badge&logo=sqlite)](https://github.com/ASingh2425/Enterprise-Operations-Intelligence-Suite)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+
+> **End-to-End Supply Chain & Business Analytics Platform** simulating the work of a **Senior Business Intelligence Analyst at Amazon**.
+
+🌐 **LIVE INTERACTIVE DASHBOARD DEMO**:  
+👉 **[https://asingh2425.github.io/Enterprise-Operations-Intelligence-Suite/](https://asingh2425.github.io/Enterprise-Operations-Intelligence-Suite/)**
 
 ---
 
 ## 📌 Executive Summary
 
-The **Operations Intelligence Suite** is an end-to-end business intelligence platform simulating enterprise-scale e-commerce operations (modeled after Amazon Global Operations). The project integrates synthetic data generation, SQL Star Schema modeling, Python machine learning analytics, and a Power BI / Web BI dashboard to support supply chain optimization, inventory management, logistics monitoring, and executive decision-making.
+The **Operations Intelligence Suite** is a production-quality Business Intelligence solution built to answer strategic business questions, identify operational inefficiencies across global fulfillment networks, forecast future demand, and support executive decision-making.
 
-Target GitHub Repository: [ASingh2425/Enterprise-Operations-Intelligence-Suite](https://github.com/ASingh2425/Enterprise-Operations-Intelligence-Suite)
-
----
-
-## 📊 Standardized Enterprise Dataset Scale
-
-| Entity Table | Record Count | Description & Scope |
-|---|---|---|
-| **FactOrders** | **520,000 Rows** | Transaction line items across 3-year historical window (2023–2025). |
-| **DimCustomers** | **25,000 Accounts** | Customer master records with segment, region, country, city, and LTV. |
-| **DimProducts** | **2,000 SKUs** | Product catalog across 4 categories (Technology, Furniture, Office, Logistics). |
-| **DimWarehouses** | **15 Facilities** | Regional fulfillment hubs across North America, Europe, and APAC. |
-| **DimSuppliers** | **120 Vendors** | Global suppliers with rating, defect rate, lead time, and risk index. |
-| **DimLogisticsCarriers**| **8 Carriers** | Enterprise freight carriers with reliability scores and base rates. |
-| **FactInventory** | **6,000 Snapshots** | Monthly stock snapshots with EOQ, Safety Stock, and Days of Inventory (DOI). |
-| **FactReturns** | **25,480 Returns** | Return transaction log with refund payouts and restocking fees. |
-| **DimCalendar** | **1,096 Days** | Complete 3-year date dimension table. |
+The solution features a complete end-to-end analytics workflow:
+1. **Python Synthetic Generator & Data Pipeline**: Generates 520,000 orders across 25,000 customers, 2,000 product SKUs, 15 fulfillment centers, 120 suppliers, and 8 logistics carriers.
+2. **Advanced ML Modules**: Holt-Winters Time Series Demand Forecasting (30/60/90/180 days), RFM Customer Quantile Segmentation, Economic Order Quantity (EOQ) / Safety Stock optimization, and Isolation Forest anomaly detection.
+3. **Automated SQL Database Builder**: Runnable `python/setup_database.py` that populates a relational database (`ops_intelligence.db`), builds indexes, creates analytical views, and executes Amazon BI queries.
+4. **Power BI Semantic Model**: Power BI Project format (`Operations_Intelligence.pbip`), custom Dark Navy Glassmorphism theme (`theme.json`), and 30+ enterprise DAX measures.
+5. **Interactive Single-Page Web Dashboard**: 10 interactive pages with Chart.js canvas visualizations, slicers, bookmarks, field parameters, and DAX calculation modal.
 
 ---
 
 ## 🏗️ Solution Component Architecture
 
-```text
-Python Synthetic Generator ────► Raw CSV Files ────► Python ETL & Analytics Engine
-                                                            │
-                                                            ▼
-Executive Business Decisions ◄─── Interactive Web Dashboard ◄─── Processed Datasets / SQL Engine
-```
+![Component Architecture](assets/architecture.svg)
+
+---
+
+## 📐 Data Model Topology (Star Schema)
+
+![Star Schema Data Model](assets/data_model.svg)
+
+---
+
+## 📊 Standardized Enterprise Dataset Scale
+
+| Entity Table | Record Count | Description & Scope | Sample File |
+|---|---|---|---|
+| **FactOrders** | **520,000 Rows** | Transaction line items across 3-year historical window (2023–2025). | `data/sample/Sample_Orders.csv` |
+| **DimCustomers** | **25,000 Accounts** | Customer master records with segment, region, country, city, and LTV. | `data/sample/Sample_Customers.csv` |
+| **DimProducts** | **2,000 SKUs** | Product catalog across 4 categories (Technology, Furniture, Office, Logistics). | `data/sample/Sample_Products.csv` |
+| **DimWarehouses** | **15 Facilities** | Regional fulfillment hubs across North America, Europe, and APAC. | `data/sample/Sample_Warehouses.csv` |
+| **DimSuppliers** | **120 Vendors** | Global suppliers with rating, defect rate, lead time, and risk index. | `data/sample/Sample_Suppliers.csv` |
+| **DimLogisticsCarriers**| **8 Carriers** | Enterprise freight carriers with reliability scores and base rates. | `data/sample/Sample_Logistics_Carriers.csv` |
+| **FactInventory** | **6,000 Snapshots** | Monthly stock snapshots with EOQ, Safety Stock, and Days of Inventory (DOI). | `data/sample/Sample_Inventory.csv` |
+| **FactReturns** | **25,480 Returns** | Return transaction log with refund payouts and restocking fees. | `data/sample/Sample_Returns.csv` |
+| **DimCalendar** | **1,096 Days** | Complete 3-year date dimension table. | `data/raw/DimCalendar.csv` |
 
 ---
 
@@ -96,19 +107,19 @@ Executive Business Decisions ◄─── Interactive Web Dashboard ◄───
 
 ### 1. Prerequisites
 - Python 3.10+
-- Modern Web Browser (Chrome / Edge / Firefox)
+- Modern Web Browser
 - Power BI Desktop (Optional)
 
-### 2. Execution Pipeline
+### 2. Quick Execution
 ```bash
-# Clone the repository
+# Clone repository
 git clone https://github.com/ASingh2425/Enterprise-Operations-Intelligence-Suite.git
 cd Enterprise-Operations-Intelligence-Suite
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Execute Python Data Generation & Analytics Pipeline
+# Run Python Data Generation, ETL & Machine Learning Pipeline
 python python/generate_raw_data.py
 python python/data_cleaning.py
 python python/feature_engineering.py
@@ -117,9 +128,14 @@ python python/customer_segmentation.py
 python python/inventory_analysis.py
 python python/anomaly_detection.py
 python python/generate_insights.py
+
+# Build SQL Database & Run Analytical Queries
+python python/setup_database.py
 ```
 
-Simply open `index.html` in your browser to interactively explore the live dashboard!
+### 3. Open Power BI Project or Interactive Web Dashboard
+- **Power BI Project**: Open `powerbi/Operations_Intelligence.pbip` in Power BI Desktop.
+- **Interactive Web App**: Open `index.html` in any browser or visit the live link: **[https://asingh2425.github.io/Enterprise-Operations-Intelligence-Suite/](https://asingh2425.github.io/Enterprise-Operations-Intelligence-Suite/)**
 
 ---
 

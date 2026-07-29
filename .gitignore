@@ -15,6 +15,9 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Large Datasets (>50MB) - Generated automatically via python scripts
+# Large Datasets (>50MB) & Built SQLite Databases
+# Generated automatically on-demand via python scripts
 data/raw/*.csv
 data/processed/*.csv
+*.db
+data/*.db

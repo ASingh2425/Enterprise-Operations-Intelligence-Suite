@@ -1,0 +1,41 @@
+SupplierID,SupplierName,Country,Rating,AvgDeliveryDays,DefectRate,SupplierRiskIndex
+SUP-001,Global Supplier 1 (South Korea),South Korea,3.32,3.9,0.0114,42.45
+SUP-002,Global Supplier 2 (United States),United States,4.95,19.2,0.0232,52.75
+SUP-003,Global Supplier 3 (Canada),Canada,3.93,14.7,0.031,69.1
+SUP-004,Global Supplier 4 (Canada),Canada,4.54,14.5,0.0301,58.75
+SUP-005,Global Supplier 5 (Canada),Canada,3.53,10.0,0.026,63.05
+SUP-006,Global Supplier 6 (Taiwan),Taiwan,3.65,6.4,0.0066,36.45
+SUP-007,Global Supplier 7 (Canada),Canada,3.68,10.0,0.0361,70.9
+SUP-008,Global Supplier 8 (Germany),Germany,3.8,21.3,0.0449,94.85
+SUP-009,Global Supplier 9 (Mexico),Mexico,3.28,5.9,0.0466,81.25
+SUP-010,Global Supplier 10 (United States),United States,4.52,21.8,0.0069,46.8
+SUP-011,Global Supplier 11 (United States),United States,4.39,4.0,0.0284,43.55
+SUP-012,Global Supplier 12 (Canada),Canada,4.22,9.7,0.0387,64.95
+SUP-013,Global Supplier 13 (Japan),Japan,4.5,9.1,0.0185,39.65
+SUP-014,Global Supplier 14 (United States),United States,4.18,3.3,0.0056,22.85
+SUP-015,Global Supplier 15 (Taiwan),Taiwan,4.38,13.1,0.0145,43.45
+SUP-016,Global Supplier 16 (Germany),Germany,4.9,17.4,0.0438,71.4
+SUP-017,Global Supplier 17 (Mexico),Mexico,3.65,21.7,0.0099,62.7
+SUP-018,Global Supplier 18 (Mexico),Mexico,3.73,5.8,0.0338,61.55
+SUP-019,Global Supplier 19 (Taiwan),Taiwan,4.42,18.5,0.0102,46.65
+SUP-020,Global Supplier 20 (Vietnam),Vietnam,3.57,22.5,0.0203,75.5
+SUP-021,Global Supplier 21 (Japan),Japan,3.42,3.5,0.0459,74.85
+SUP-022,Global Supplier 22 (South Korea),South Korea,3.7,16.2,0.0084,52.2
+SUP-023,Global Supplier 23 (Taiwan),Taiwan,4.83,17.7,0.0398,68.9
+SUP-024,Global Supplier 24 (Mexico),Mexico,4.12,10.1,0.0308,59.15
+SUP-025,Global Supplier 25 (South Korea),South Korea,4.59,22.9,0.0219,62.4
+SUP-026,Global Supplier 26 (Germany),Germany,3.23,5.1,0.0318,66.0
+SUP-027,Global Supplier 27 (China),China,3.49,9.4,0.0471,83.85
+SUP-028,Global Supplier 28 (Mexico),Mexico,3.88,22.7,0.0427,93.55
+SUP-029,Global Supplier 29 (India),India,3.27,19.9,0.0021,57.9
+SUP-030,Global Supplier 30 (United States),United States,4.26,20.7,0.029,71.15
+SUP-031,Global Supplier 31 (United States),United States,4.26,17.2,0.0185,55.4
+SUP-032,Global Supplier 32 (China),China,4.65,17.4,0.0306,61.95
+SUP-033,Global Supplier 33 (China),China,4.02,16.6,0.0128,52.4
+SUP-034,Global Supplier 34 (South Korea),South Korea,3.3,17.1,0.0181,69.25
+SUP-035,Global Supplier 35 (Taiwan),Taiwan,3.62,15.6,0.0021,46.2
+SUP-036,Global Supplier 36 (Mexico),Mexico,3.29,21.9,0.0128,71.3
+SUP-037,Global Supplier 37 (South Korea),South Korea,4.81,14.6,0.0103,35.05
+SUP-038,Global Supplier 38 (Vietnam),Vietnam,3.55,4.8,0.0084,37.35
+SUP-039,Global Supplier 39 (China),China,3.77,8.0,0.0031,33.55
+SUP-040,Global Supplier 40 (Taiwan),Taiwan,4.82,6.9,0.0457,58.75

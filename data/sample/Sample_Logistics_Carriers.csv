@@ -1,0 +1,9 @@
+CarrierID,CarrierName,ReliabilityScore,BaseRatePerKm
+CAR-01,Amazon Air Logistics,0.96,0.45
+CAR-02,FedEx Express,0.94,0.52
+CAR-03,DHL Express Global,0.95,0.5
+CAR-04,UPS Worldwide,0.92,0.48
+CAR-05,DB Schenker Freight,0.9,0.42
+CAR-06,Kuehne + Nagel Logistics,0.91,0.44
+CAR-07,SF Express Asia,0.93,0.4
+CAR-08,Regional Freight Co,0.86,0.35
