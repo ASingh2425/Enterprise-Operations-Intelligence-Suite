@@ -1,0 +1,44 @@
+{
+  "name": "Enterprise Operations Dark Navy Glassmorphism",
+  "dataColors": [
+    "#38BDF8",
+    "#818CF8",
+    "#34D399",
+    "#F87171",
+    "#FBBF24",
+    "#A78BFA",
+    "#F472B6",
+    "#2DD4BF"
+  ],
+  "background": "#0F172A",
+  "foreground": "#F8FAFC",
+  "tableAccent": "#1E293B",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "show": true,
+            "color": { "solid": { "color": "#1E293B" } },
+            "transparency": 15
+          }
+        ],
+        "border": [
+          {
+            "show": true,
+            "color": { "solid": { "color": "#334155" } },
+            "radius": 12
+          }
+        ],
+        "dropShadow": [
+          {
+            "show": true,
+            "color": { "solid": { "color": "#000000" } },
+            "transparency": 60,
+            "blur": 10
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Operations Intelligence Suite | Amazon BI Platform</title>
+    <!-- Modern Typography & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js for High Performance Canvas Visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-logo">
+                    <i class="fa-solid fa-layer-group"></i>
+                </div>
+                <div class="brand-text">
+                    <h2>OpsIntel Suite</h2>
+                    <span>Amazon BI Analytics</span>
+                </div>
+            </div>
+
+            <nav class="nav-menu">
+                <div class="nav-section-label">NAVIGATOR (10 PAGES)</div>
+                <button class="nav-item active" data-page="page-1">
+                    <i class="fa-solid fa-chart-pie"></i> Executive Dashboard
+                </button>
+                <button class="nav-item" data-page="page-2">
+                    <i class="fa-solid fa-chart-line"></i> Sales Analytics
+                </button>
+                <button class="nav-item" data-page="page-3">
+                    <i class="fa-solid fa-boxes-packing"></i> Supply Chain Analytics
+                </button>
+                <button class="nav-item" data-page="page-4">
+                    <i class="fa-solid fa-truck-fast"></i> Logistics Dashboard
+                </button>
+                <button class="nav-item" data-page="page-5">
+                    <i class="fa-solid fa-arrow-trend-up"></i> Demand Forecasting
+                </button>
+                <button class="nav-item" data-page="page-6">
+                    <i class="fa-solid fa-users"></i> Customer Intelligence
+                </button>
+                <button class="nav-item" data-page="page-7">
+                    <i class="fa-solid fa-chart-column"></i> Profitability Analysis
+                </button>
+                <button class="nav-item" data-page="page-8">
+                    <i class="fa-solid fa-warehouse"></i> Inventory Optimization
+                </button>
+                <button class="nav-item" data-page="page-9">
+                    <i class="fa-solid fa-shield-halved"></i> Risk Monitoring
+                </button>
+                <button class="nav-item" data-page="page-10">
+                    <i class="fa-solid fa-brain"></i> Executive AI Insights
+                </button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-badge">
+                    <i class="fa-solid fa-user-gear"></i>
+                    <div>
+                        <div class="user-name">Senior BI Analyst</div>
+                        <div class="user-role">Amazon Ops Team</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Header Toolbar -->
+            <header class="top-header">
+                <div class="header-title">
+                    <h1 id="current-page-title">Executive Dashboard</h1>
+                    <p id="current-page-subtitle">Real-time Global Operations Monitoring & High-Level KPIs</p>
+                </div>
+
+                <div class="header-controls">
+                    <!-- Global Slicers & Dynamic Field Parameters -->
+                    <div class="slicer-group">
+                        <label><i class="fa-solid fa-globe"></i> Region:</label>
+                        <select id="slicer-region" class="slicer-select">
+                            <option value="ALL">Global (All Regions)</option>
+                            <option value="North America">North America</option>
+                            <option value="Europe">Europe</option>
+                            <option value="APAC">APAC</option>
+                        </select>
+                    </div>
+
+                    <div class="slicer-group">
+                        <label><i class="fa-solid fa-calendar-days"></i> Period:</label>
+                        <select id="slicer-period" class="slicer-select">
+                            <option value="2025">FY 2025</option>
+                            <option value="2024">FY 2024</option>
+                            <option value="2023">FY 2023</option>
+                        </select>
+                    </div>
+
+                    <button id="btn-reset-filters" class="btn-secondary" title="Reset All Filters">
+                        <i class="fa-solid fa-rotate-left"></i> Reset
+                    </button>
+                    <button id="btn-dax-modal" class="btn-accent">
+                        <i class="fa-solid fa-code"></i> DAX Measures
+                    </button>
+                </div>
+            </header>
+
+            <!-- Dynamic Dashboard Pages Container -->
+            <div class="dashboard-body">
+
+                <!-- Page 1: Executive Dashboard -->
+                <section id="page-1" class="page-content active">
+                    <div class="kpi-grid">
+                        <div class="kpi-card glass">
+                            <div class="kpi-header">
+                                <span>NET REVENUE</span>
+                                <i class="fa-solid fa-dollar-sign kpi-icon"></i>
+                            </div>
+                            <div class="kpi-value">$142.8M</div>
+                            <div class="kpi-sub positive"><i class="fa-solid fa-arrow-trend-up"></i> +14.2% YoY vs 2024</div>
+                        </div>
+
+                        <div class="kpi-card glass">
+                            <div class="kpi-header">
+                                <span>GROSS PROFIT</span>
+                                <i class="fa-solid fa-sack-dollar kpi-icon"></i>
+                            </div>
+                            <div class="kpi-value">$46.4M</div>
+                            <div class="kpi-sub positive"><i class="fa-solid fa-arrow-trend-up"></i> 32.5% Gross Margin</div>
+                        </div>
+
+                        <div class="kpi-card glass">
+                            <div class="kpi-header">
+                                <span>TOTAL ORDERS</span>
+                                <i class="fa-solid fa-box-open kpi-icon"></i>
+                            </div>
+                            <div class="kpi-value">520,000</div>
+                            <div class="kpi-sub positive"><i class="fa-solid fa-arrow-trend-up"></i> +8.6% Growth</div>
+                        </div>
+
+                        <div class="kpi-card glass">
+                            <div class="kpi-header">
+                                <span>PERFECT ORDER %</span>
+                                <i class="fa-solid fa-circle-check kpi-icon"></i>
+                            </div>
+                            <div class="kpi-value">94.8%</div>
+                            <div class="kpi-sub positive"><i class="fa-solid fa-check"></i> Target: >93.5%</div>
+                        </div>
+
+                        <div class="kpi-card glass">
+                            <div class="kpi-header">
+                                <span>RETURN RATE</span>
+                                <i class="fa-solid fa-arrow-rotate-left kpi-icon"></i>
+                            </div>
+                            <div class="kpi-value">4.80%</div>
+                            <div class="kpi-sub neutral"><i class="fa-solid fa-minus"></i> SLA Threshold 5.0%</div>
+                        </div>
+
+                        <div class="kpi-card glass">
+                            <div class="kpi-header">
+                                <span>ON-TIME DELIVERY</span>
+                                <i class="fa-solid fa-truck-clock kpi-icon"></i>
+                            </div>
+                            <div class="kpi-value">96.2%</div>
+                            <div class="kpi-sub positive"><i class="fa-solid fa-arrow-trend-up"></i> +1.4% MoM</div>
+                        </div>
+                    </div>
+
+                    <div class="charts-grid two-col">
+                        <div class="chart-card glass">
+                            <div class="chart-title">
+                                <h3>Monthly Revenue & Profit Growth Trend</h3>
+                                <span>Rolling 12 Months Analytical View</span>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="chart-exec-trend"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="chart-card glass">
+                            <div class="chart-title">
+                                <h3>Regional Revenue Distribution</h3>
+                                <span>Global Market Performance Breakdown</span>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="chart-exec-region"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Page 2: Sales Analytics -->
+                <section id="page-2" class="page-content">
+                    <div class="charts-grid two-col">
+                        <div class="chart-card glass">
+                            <div class="chart-title">
+                                <h3>Revenue by Product Category</h3>
+                                <span>Technology vs Furniture vs Office Supplies vs Logistics</span>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="chart-sales-cat"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="chart-card glass">
+                            <div class="chart-title">
+                                <h3>Top 5 High-Margin Product SKUs</h3>
+                                <span>Selling Price vs Cost Margin Breakdown</span>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="chart-sales-top-skus"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Page 3: Supply Chain Analytics -->
+                <section id="page-3" class="page-content">
+                    <div class="charts-grid two-col">
+                        <div class="chart-card glass">
+                            <div class="chart-title">
+                                <h3>Fulfillment Center Capacity Utilization</h3>
+                                <span>Stock Units vs Capacity Threshold</span>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="chart-wh-capacity"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="chart-card glass">
+                            <div class="chart-title">
+                                <h3>Supplier Quality Score vs Defect Rate</h3>
+                                <span>Vendor Risk Radar</span>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="chart-supplier-risk"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Page 4: Logistics Dashboard -->
+                <section id="page-4" class="page-content">
+                    <div class="charts-grid two-col">
+                        <div class="chart-card glass">
+                            <div class="chart-title">
+                                <h3>Carrier On-Time Delivery Reliability</h3>
+                                <span>Amazon Air vs FedEx vs DHL vs UPS vs Regional</span>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="chart-carrier-sla"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="chart-card glass">
+                            <div class="chart-title">
+                                <h3>Average Shipping Cost per Route ($)</h3>
+                                <span>Carrier Freight Efficiency Comparison</span>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="chart-shipping-cost"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Page 5: Demand Forecasting -->
+                <section id="page-5" class="page-content">
+                    <div class="chart-card glass full-width">
+                        <div class="chart-title">
+                            <h3>30 / 60 / 90 / 180 Days Predictive Demand Forecast</h3>
+                            <span>ARIMA / Holt-Winters Time Series Prediction with 95% Confidence Interval</span>
+                        </div>
+                        <div class="forecast-badge-container">
+                            <span class="badge info">Model: Holt-Winters Exponential Smoothing</span>
+                            <span class="badge success">MAPE: 3.42%</span>
+                            <span class="badge success">RMSE: 142.5 Units</span>
+                        </div>
+                        <div class="chart-container large">
+                            <canvas id="chart-demand-forecast"></canvas>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Page 6: Customer Intelligence -->
+                <section id="page-6" class="page-content">
+                    <div class="charts-grid two-col">
+                        <div class="chart-card glass">
+                            <div class="chart-title">
+                                <h3>Customer RFM Segment Breakdown</h3>
+                                <span>Champions vs Loyal vs At-Risk vs Lost</span>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="chart-rfm-segments"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="chart-card glass">
+                            <div class="chart-title">
+                                <h3>Customer Segment Lifetime Value (LTV)</h3>
+                                <span>Monetary Value by Tier ($)</span>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="chart-customer-ltv"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Page 7: Profitability Analysis -->
+                <section id="page-7" class="page-content">
+                    <div class="chart-card glass full-width">
+                        <div class="chart-title">
+                            <h3>Revenue to Net Profit Waterfall Breakdown</h3>
+                            <span>Gross Sales -> Discounts -> COGS -> Shipping Costs -> Net Profit</span>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="chart-waterfall-profit"></canvas>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Page 8: Inventory Optimization -->
+                <section id="page-8" class="page-content">
+                    <div class="charts-grid two-col">
+                        <div class="chart-card glass">
+                            <div class="chart-title">
+                                <h3>ABC Inventory Valuation Classification</h3>
+                                <span>Category A (80% Revenue) vs B (15%) vs C (5%)</span>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="chart-abc-pareto"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="chart-card glass">
+                            <div class="chart-title">
+                                <h3>Days of Inventory (DOI) & EOQ Reorder Alerts</h3>
+                                <span>Top Warehouses Holding Stock</span>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="chart-inventory-doi"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Page 9: Risk Monitoring -->
+                <section id="page-9" class="page-content">
+                    <div class="charts-grid two-col">
+                        <div class="chart-card glass">
+                            <div class="chart-title">
+                                <h3>Operational Anomaly Heatmap</h3>
+                                <span>Shipping Cost Spikes & Profit Dip Incidents</span>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="chart-anomalies"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="chart-card glass">
+                            <div class="chart-title">
+                                <h3>Stockout Probability Index by Warehouse</h3>
+                                <span>Reorder Point Breach Frequency</span>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="chart-stockout-risk"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Page 10: Executive AI Insights -->
+                <section id="page-10" class="page-content">
+                    <div class="insights-container glass">
+                        <div class="insights-header">
+                            <div class="ai-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Narrative Generator</div>
+                            <h2>Automated Operational Recommendations & Decision Support</h2>
+                        </div>
+                        <div class="insights-grid" id="insights-cards-list">
+                            <!-- Generated dynamically by app.js -->
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- DAX Measures Modal -->
+    <div id="dax-modal" class="modal-overlay">
+        <div class="modal-content glass">
+            <div class="modal-header">
+                <h2><i class="fa-solid fa-code"></i> Advanced DAX Calculation Engine</h2>
+                <button class="modal-close" id="btn-close-dax"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <p>Catalog of 30+ Enterprise DAX measures implemented in the model:</p>
+                <div class="dax-code-block">
+<pre><code>-- 1. Net Revenue YoY %
+Net Revenue YoY % = 
+VAR CurrentRev = [Total Net Revenue]
+VAR PriorRev = CALCULATE([Total Net Revenue], SAMEPERIODLASTYEAR('DimCalendar'[FullDate]))
+RETURN DIVIDE(CurrentRev - PriorRev, PriorRev, 0)
+
+-- 2. Perfect Order Rate %
+Perfect Order Rate % = 
+DIVIDE(
+    CALCULATE(COUNTROWS(FactOrders), FactOrders[IsLate] = 0, FactOrders[IsReturned] = 0),
+    COUNTROWS(FactOrders),
+    0
+)
+
+-- 3. Economic Order Quantity (EOQ)
+EOQ = 
+VAR Demand = [Annualized Demand Units]
+VAR SetupCost = 125.0
+VAR HoldingCost = SELECTEDVALUE(DimProducts[Cost]) * 0.18
+RETURN SQRT( DIVIDE(2 * Demand * SetupCost, HoldingCost) )
+
+-- 4. Rolling 12 Month Revenue
+Rolling 12M Revenue = 
+CALCULATE(
+    [Total Net Revenue],
+    DATESINPERIOD('DimCalendar'[FullDate], MAX('DimCalendar'[FullDate]), -12, MONTH)
+)</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
