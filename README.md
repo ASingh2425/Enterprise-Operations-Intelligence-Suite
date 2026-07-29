@@ -12,91 +12,58 @@ Target Repository: [ASingh2425/Enterprise-Operations-Intelligence-Suite](https:/
 
 ---
 
-## 📌 Executive Overview & Core Features
+## 📌 Executive Summary & Scope
 
 The **Operations Intelligence Suite** is a production-quality Business Intelligence solution built to answer strategic business questions, identify operational inefficiencies across global fulfillment networks, forecast future demand, and support executive decision-making.
 
-### Key Capabilities
-- **500,000+ Fact Transactions**: Realistic multi-table relational dataset (Orders, Customers, Products, Warehouses, Suppliers, Logistics Carriers, Returns, Calendar).
-- **Python ML & Analytics Engine**:
-  - 📈 **Demand Forecasting**: 30, 60, 90, and 180-day predictive time series with 95% confidence intervals (Holt-Winters / ARIMA).
-  - 👥 **RFM Customer Segmentation**: Quantile scoring & K-Means clustering (Champions, Loyal, At Risk, Lost).
-  - 📦 **Inventory Optimization**: Pareto ABC Classification, Economic Order Quantity (EOQ), Safety Stock, and Days of Inventory (DOI).
-  - 🚨 **Anomaly Detection**: Isolation Forest & Z-Score outlier detection for shipping costs and profit compression.
-  - 🤖 **Automated Executive Insights**: Natural language operational recommendations generator.
-- **Enterprise Power BI Model & Interactive Web App**:
-  - Sleek **Dark Navy Glassmorphism UI** (`theme.json`).
-  - 30+ Advanced DAX Measures (YoY/MoM, Rolling 12M, Window Functions, Perfect Order %).
-  - **10 Interactive Dashboard Pages** accessible via browser UI or Power BI.
-- **Production Documentation**: 13 comprehensive markdown documents covering architecture, ETL, SQL, DAX, performance tuning, and testing.
+### In-Scope Functional Modules
+- **Sales Performance**: Revenue trends, AOV, category margin analysis, and product profitability.
+- **Customer Analytics**: RFM quantile segmentation, lifetime value (LTV) modeling, and churn risk detection.
+- **Inventory Optimization**: Pareto ABC classification, Economic Order Quantity (EOQ), Safety Stock buffers, and Days of Inventory (DOI).
+- **Supplier Performance**: Vendor defect rate analysis, delivery lead time monitoring, and composite supplier risk index.
+- **Warehouse Operations**: Fulfillment center capacity utilization, inventory valuation, and stockout probability modeling.
+- **Logistics & Freight Performance**: Carrier SLA on-time delivery rates, transit time latency, and geographic route shipping costs.
+- **Financial Analysis**: Gross sales to net profit waterfall breakdown, discount impact, and margin variance.
+- **Demand Forecasting**: 30, 60, 90, and 180-day time-series demand predictions with 95% confidence intervals.
+- **Executive KPI Monitoring**: C-suite KPI cards, YoY/MoM performance indicators, and rolling 12-month trends.
+- **Risk & Anomaly Monitoring**: Z-score and Isolation Forest outlier detection for freight costs and margin compression.
 
 ---
 
-## 🖥️ 10 Interactive Dashboard Pages
+## 🖥️ 10 Interactive Dashboard Pages & KPI Mapping
 
-| Page | Name | Core Business Question Answered | Key Visual Highlights |
+| Page | Name | Primary Assigned KPIs | Target Stakeholder |
 |---|---|---|---|
-| 1 | **Executive Dashboard** | How is overall global operational performance trending? | Top KPIs, YoY % growth, 12M trend, Regional map breakdown |
-| 2 | **Sales Analytics** | Which product categories and SKUs drive gross profit? | Monthly sales trend, top SKUs, margin heatmaps |
-| 3 | **Supply Chain Analytics** | Are fulfillment centers operating within capacity thresholds? | FC capacity utilization, supplier defect radar |
-| 4 | **Logistics Dashboard** | Which freight carriers meet our SLA delivery promises? | Carrier on-time SLA %, route shipping cost line chart |
-| 5 | **Demand Forecasting** | What is predicted product demand over the next 180 days? | Predictive line with 95% confidence band & MAPE/RMSE |
-| 6 | **Customer Intelligence** | How are high-value customer segments behaving? | RFM distribution pie chart, Lifetime Value (LTV) bar |
-| 7 | **Profitability Analysis** | Where are sales margins being lost from gross to net? | Waterfall breakdown (Sales -> Discounts -> COGS -> Profit) |
-| 8 | **Inventory Optimization** | How can stock holding costs be minimized without stockouts? | ABC Pareto chart, Days of Inventory (DOI), EOQ reorder alerts |
-| 9 | **Risk Monitoring** | What operational anomalies and stockout risks threaten SLAs? | Anomaly count bars, warehouse stockout risk index |
-| 10| **Executive AI Insights** | What direct operational actions should leadership execute? | Automated narrative recommendation cards |
+| 1 | **Executive Dashboard** | Net Revenue, Gross Profit, Perfect Order Rate %, Return Rate % | VP Global Supply Chain, C-Suite |
+| 2 | **Sales Analytics** | Net Revenue, Gross Margin %, Average Order Value (AOV) | Category Managers, Merchandising |
+| 3 | **Supply Chain Analytics** | FC Capacity Utilization %, Supplier Risk Index, Defect Rate % | Fulfillment Managers, Procurement |
+| 4 | **Logistics Dashboard** | Carrier On-Time SLA %, Route Shipping Cost, Transit Days | Logistics Director, Fleet Ops |
+| 5 | **Demand Forecasting** | 180-Day Predicted Demand, 95% Confidence Band, MAPE, RMSE | Demand Planners, Supply Chain |
+| 6 | **Customer Intelligence** | RFM Segment Distribution, Customer Lifetime Value (LTV) | Customer Success Lead, Marketing |
+| 7 | **Profitability Analysis** | Gross Revenue, Net Revenue, COGS, Net Profit Waterfall Flow | CFO, Financial Analysts |
+| 8 | **Inventory Optimization** | ABC Pareto Revenue Share, Days of Inventory (DOI), EOQ | Warehouse Operations, Inventory Leads |
+| 9 | **Risk Monitoring** | Anomaly Incident Count, Stockout Risk Score | Operations Risk Lead, Steering Comm. |
+| 10| **Executive AI Insights** | Strategic Operational Impact Score, Priority Action Cards | Executive Committee, C-Suite |
 
 ---
 
-## 🏗️ Project Architecture & Repository Structure
+## 📚 Master Documentation Index
 
-```
-Operations-Intelligence-Suite/
-├── data/
-│   ├── raw/                  # Initial raw CSV datasets (520,000+ orders, customers, etc.)
-│   ├── processed/            # Cleaned, transformed, and ML-engineered datasets
-├── sql/
-│   ├── schema.sql            # Core database schema
-│   ├── create_tables.sql     # DDL table creation with primary/foreign keys
-│   ├── constraints.sql       # Foreign key & data integrity constraints
-│   ├── indexes.sql           # Performance B-tree indexes
-│   ├── views.sql             # Analytical views (vw_ExecutiveMonthlySummary, etc.)
-│   └── business_queries.sql  # Complex analytical queries (Window functions, CTEs)
-├── python/
-│   ├── generate_raw_data.py  # Synthetic data generation engine
-│   ├── data_cleaning.py      # Null handling, outlier capping, type enforcement
-│   ├── feature_engineering.py# SLA calculation, perfect order flag, profit margins
-│   ├── forecasting.py        # 30/60/90/180-day time series demand forecasting
-│   ├── customer_segmentation.py # RFM Scoring & segmentation
-│   ├── inventory_analysis.py # ABC Pareto, EOQ formula, Safety Stock
-│   ├── anomaly_detection.py # Z-score & Isolation Forest anomaly detection
-│   └── generate_insights.py # Natural language executive recommendation synthesizer
-├── powerbi/
-│   ├── Operations_Intelligence.pbix.md # Power BI PBIX model specification blueprint
-│   └── theme.json            # Dark Navy / Glassmorphism Power BI theme
-├── web_app/                  # Interactive single-page web dashboard application
-│   ├── index.html            # Main container with 10 dashboard pages & navigation
-│   ├── styles.css            # Enterprise dark navy styling & micro-animations
-│   └── app.js                # Chart.js visualization engine & slicer triggers
-├── docs/                     # 13 Production documentation markdown files
-│   ├── Business_Problem.md
-│   ├── Project_Architecture.md
-│   ├── Data_Dictionary.md
-│   ├── ETL_Documentation.md
-│   ├── SQL_Documentation.md
-│   ├── DAX_Measures.md
-│   ├── Dashboard_Guide.md
-│   ├── Business_Insights.md
-│   ├── KPI_Definitions.md
-│   ├── Data_Model.md
-│   ├── Performance_Optimization.md
-│   ├── Testing_Report.md
-│   └── Future_Enhancements.md
-├── requirements.txt
-├── LICENSE
-└── README.md
-```
+| Document | Purpose |
+|---|---|
+| [Business_Problem.md](docs/Business_Problem.md) | Quantified problem statement, scope, success metrics, assumptions, risks & deliverables |
+| [Business_Requirements.md](docs/Business_Requirements.md) | User stories, stakeholder personas, acceptance criteria, and non-functional requirements |
+| [KPI_Definitions.md](docs/KPI_Definitions.md) | Mathematical formulas, target benchmarks, disclaimers, and dashboard page mapping matrix |
+| [Dashboard_Specification.md](docs/Dashboard_Specification.md) | Page-by-page visual layout, visual types, slicers, and interaction specifications |
+| [Data_Dictionary.md](docs/Data_Dictionary.md) | Physical schema types, primary/foreign keys, constraints, and business descriptions |
+| [Data_Model.md](docs/Data_Model.md) | Star Schema topology, cardinality, filter directions, and VertiPaq tuning rules |
+| [Project_Architecture.md](docs/Project_Architecture.md) | End-to-end workflow diagram, tech stack justification, and pipeline specifications |
+| [ETL_Documentation.md](docs/ETL_Documentation.md) | Ingestion steps, deduplication, missing value treatment, and winsorization rules |
+| [SQL_Documentation.md](docs/SQL_Documentation.md) | RDBMS schema, indexes, views, and complex Amazon BI analyst queries |
+| [DAX_Measures.md](docs/DAX_Measures.md) | Catalog of 30+ enterprise DAX measures with code blocks and formula explanations |
+| [Performance_Optimization.md](docs/Performance_Optimization.md) | VertiPaq encoding rules, DAX tuning, and SQL index optimizations |
+| [Testing_Report.md](docs/Testing_Report.md) | Quality assurance audit, row count checks, and measure verification |
+| [Future_Enhancements.md](docs/Future_Enhancements.md) | Microsoft Fabric, Apache Kafka streaming, and NeuralProphet roadmap |
 
 ---
 
@@ -105,18 +72,18 @@ Operations-Intelligence-Suite/
 ### 1. Prerequisites
 - Python 3.10+
 - Modern Web Browser (Chrome / Edge / Firefox)
-- Power BI Desktop (Optional, for `.pbix` model inspect)
+- Power BI Desktop (Optional)
 
-### 2. Installation & Pipeline Execution
+### 2. Execution & Launch
 ```bash
 # Clone the repository
 git clone https://github.com/ASingh2425/Enterprise-Operations-Intelligence-Suite.git
 cd Enterprise-Operations-Intelligence-Suite
 
-# Install Python dependencies
+# Install dependencies
 pip install -r requirements.txt
 
-# Execute Python ETL & Analytics Pipeline
+# Run Python ETL & Analytics Pipeline
 python python/generate_raw_data.py
 python python/data_cleaning.py
 python python/feature_engineering.py
@@ -127,8 +94,7 @@ python python/anomaly_detection.py
 python python/generate_insights.py
 ```
 
-### 3. Launch Interactive Web Dashboard
-Simply open `web_app/index.html` in any web browser to interactively explore all 10 dashboard pages, live charts, slicers, and DAX calculation modal!
+Simply open `index.html` in your browser to interactively explore the live dashboard!
 
 ---
 

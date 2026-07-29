@@ -1,84 +1,100 @@
-# Phase 1: Business Problem Statement, Stakeholder Alignment & KPI Definitions
+# Business Problem Statement, Project Scope & Strategic Framework
 
-## 1. Executive Context & Business Problem
-A multinational e-commerce enterprise operating at the scale of **Amazon Global Operations** processes hundreds of thousands of daily customer transactions across multiple regional fulfillment centers, logistics carriers, and international supplier networks.
+## 1. Quantified Executive Problem Statement
+A global enterprise e-commerce organization operating at international scale handles over 500,000 annual transactional orders across multiple regional fulfillment centers, logistics carriers, and international supplier networks.
 
-Despite massive operational volume, executive management and supply chain directors face critical operational bottlenecks:
-- **Fragmented Visibility**: Data silos between Warehouse Management Systems (WMS), Transportation Management Systems (TMS), Supplier Quality Databases, and Sales CRM.
-- **Suboptimal Capital Allocation**: High holding costs (~$420K+ tied up in overstocked warehouses) occurring simultaneously with stockouts in high-demand technology SKUs.
-- **Carrier & Supplier SLA Slippage**: Carrier delay rates exceeding 5% and supplier defect rates surpassing the 1.5% quality threshold, leading to customer churn and inflated return refund amounts.
-- **Reactive Executive Decision-Making**: Lack of automated predictive analytics (demand forecasting, anomaly alerts, RFM segmentation) to trigger proactive operational corrections.
+Despite high sales volume, executive leadership and supply chain directors face significant operational friction:
 
----
-
-## 2. Core Stakeholders & Requirements Matrix
-
-| Stakeholder Role | Primary Strategic Concern | Target Insights & Requirements |
-|---|---|---|
-| **VP of Global Supply Chain** | Overall network throughput, inventory health, perfect order compliance | Executive KPI summary, Perfect Order Rate %, regional fulfillment capacity |
-| **Director of Logistics & Transportation** | Carrier SLA performance, transit latency, freight cost efficiency | Carrier SLA on-time %, route cost comparison, late delivery heatmaps |
-| **Warehouse Operations Managers** | Fulfillment center utilization, inventory aging, reorder alerts | Days of Inventory (DOI), EOQ batch sizes, safety stock breach alerts |
-| **Category Managers / Merchandising** | Product margin, sales trends, inventory turnover | Category revenue trends, top/bottom margin SKUs, ABC Pareto classification |
-| **Vendor Management Lead** | Supplier reliability, defect rates, procurement risk | Supplier risk index, vendor defect rate %, delivery lead times |
-| **Customer Retention Lead** | Customer LTV, churn risk, return rates | RFM customer segmentation, return reason breakdown, LTV analysis |
+- **Fragmented System Visibility**: Operations teams currently rely on four independent operational systems (Warehouse Management, Transportation Management, Supplier Quality Database, and Sales Order Processing) with no unified reporting layer. This requires manual spreadsheet consolidation, resulting in 4-to-7-day delays in executive reporting.
+- **Suboptimal Capital Allocation & Inventory Mismatch**: High inventory holding costs (~$420,000+ tied up in overstocked fulfillment hubs) occur simultaneously with stockouts in high-demand technology SKUs, eroding customer trust and inflating holding expenses.
+- **Carrier & Supplier SLA Slippage**: Carrier late delivery rates exceed 5.0% and vendor defect rates surpass the 1.5% quality threshold, driving higher customer churn and elevating return refund payouts.
+- **Reactive Executive Decision-Making**: Executive KPI reporting is refreshed weekly, preventing timely identification of supply chain disruptions, demand spikes, and margin compression.
 
 ---
 
-## 3. Comprehensive Enterprise KPI Definitions
+## 2. Project Scope
 
-### Financial Performance KPIs
-1. **Net Revenue ($)**: `Gross Revenue - Promotional Discounts`
-   - *Target*: > $140M annually
-   - *Business Importance*: Measures top-line net revenue after price adjustments.
-2. **Gross Profit ($)**: `Net Revenue - COGS - Shipping Cost`
-   - *Target*: > $45M annually
-   - *Business Importance*: Actual net profit generated after direct product costs and freight shipping.
-3. **Gross Margin (%)**: `(Gross Profit / Net Revenue) * 100`
-   - *Target*: > 32.0%
-   - *Business Importance*: Indicates cost efficiency and pricing power across categories.
-4. **Average Order Value (AOV)**: `Net Revenue / Total Orders`
-   - *Target*: > $270.00
-   - *Business Importance*: Tracks average basket spending per transaction.
+### In-Scope
+The **Operations Intelligence Suite** analyzes the complete end-to-end order fulfillment lifecycle:
+- **Sales Performance**: Revenue trends, AOV, category margin analysis, and product profitability.
+- **Customer Analytics**: RFM quantile segmentation, lifetime value (LTV) modeling, and churn risk detection.
+- **Inventory Optimization**: Pareto ABC classification, Economic Order Quantity (EOQ), Safety Stock buffers, and Days of Inventory (DOI).
+- **Supplier Performance**: Vendor defect rate analysis, delivery lead time monitoring, and composite supplier risk index.
+- **Warehouse Operations**: Fulfillment center capacity utilization, inventory valuation, and stockout probability modeling.
+- **Logistics & Freight Performance**: Carrier SLA on-time delivery rates, transit time latency, and geographic route shipping costs.
+- **Financial Analysis**: Gross sales to net profit waterfall breakdown, discount impact, and margin variance.
+- **Demand Forecasting**: 30, 60, 90, and 180-day time-series demand predictions with 95% confidence intervals.
+- **Executive KPI Monitoring**: C-suite KPI cards, YoY/MoM performance indicators, and rolling 12-month trends.
+- **Risk & Anomaly Monitoring**: Z-score and Isolation Forest outlier detection for freight costs and margin compression.
 
-### Supply Chain & Fulfillment KPIs
-5. **Perfect Order Rate (%)**: `(Orders Delivered On-Time & Non-Returned / Total Orders) * 100`
-   - *Target*: > 93.5%
-   - *Business Importance*: Primary Amazon operational metric for end-to-end fulfillment success.
-6. **On-Time Delivery Rate (%)**: `(Orders Delivered <= Promised SLA / Total Orders) * 100`
-   - *Target*: > 95.0%
-   - *Business Importance*: Measures logistics carrier SLA compliance.
-7. **Return Rate (%)**: `(Returned Orders / Total Orders) * 100`
-   - *Target*: < 5.0%
-   - *Business Importance*: Evaluates product quality and order accuracy.
-8. **Fill Rate (%)**: `(Orders Shipped Complete / Total Orders Placed) * 100`
-   - *Target*: > 98.0%
-   - *Business Importance*: Measures immediate stock availability against customer demand.
-
-### Inventory Optimization KPIs
-9. **Economic Order Quantity (EOQ)**: $\sqrt{\frac{2 \times D \times S}{H}}$
-   - *Where*: $D$ = Annual Demand Units, $S$ = Setup/Ordering Cost ($125), $H$ = Annual Unit Holding Cost.
-   - *Business Importance*: Minimizes combined holding and reorder expenses.
-10. **Safety Stock Level**: $Z \times \sqrt{\text{LeadTime}} \times \sigma_{\text{DailyDemand}}$
-    - *Where*: $Z = 1.65$ (95% Service Level).
-    - *Business Importance*: Buffer stock required to prevent stockout incidents during lead time delays.
-11. **Days of Inventory (DOI)**: `(Current Inventory Value / Daily COGS)`
-    - *Target*: 30 - 45 Days
-    - *Business Importance*: Quantifies capital velocity and stockholding efficiency.
-12. **Inventory Turnover Ratio**: `365 / Days of Inventory`
-    - *Target*: 8.0x - 12.0x annually
-    - *Business Importance*: Measures how rapidly inventory is sold and replaced.
-
-### Supplier & Risk Monitoring KPIs
-13. **Supplier Risk Index**: `(5 - Vendor Rating)*15 + (Defect Rate * 1000) + (Avg Delivery Days * 1.5)`
-    - *Target*: < 30.0 (Low Risk)
-    - *Business Importance*: Multi-criteria vendor score identifying high-risk suppliers needing audits or replacement.
-14. **Stockout Probability Index**: `(Reorder Point - Current Stock) / Reorder Point`
-    - *Target*: < 0.15
-    - *Business Importance*: Early warning metric flagging SKUs approaching safety stock breach.
+### Out-of-Scope
+- **HR & Workforce Analytics**: Labor scheduling, shift management, or warehouse employee payroll.
+- **Manufacturing Operations**: Raw material procurement, assembly line tooling, or factory floor sensor telemetry.
+- **Marketing Campaign Attribution**: Paid ad click-through rates, social media conversion funnels, or SEO traffic analysis.
+- **Real-Time IoT Streaming**: Millisecond-level RFID or GPS container tracking (solution relies on batch transactional snapshots).
 
 ---
 
-## 4. Phase 1 Milestone Verification
-- ✅ Business problem statement aligned with Amazon BI Analyst standards.
-- ✅ Stakeholder requirements matrix established across 6 executive/operational personas.
-- ✅ Master KPI dictionary defined with mathematical formulas, target benchmarks, and business justifications.
+## 3. Project Success Criteria & Metrics
+
+The project is considered successful if it enables stakeholders to achieve the following operational benchmarks:
+- **Reduce Stockout Probability**: Decrease safety stock breach frequency by **15%** across all regional warehouses.
+- **Improve Perfect Order Rate**: Elevate network-wide Perfect Order Rate from **94.8% to > 96.0%**.
+- **Optimize Logistics Freight Costs**: Reduce average shipping cost per order by **8%** by shifting volume to high-SLA carriers.
+- **Enhance Supplier Quality**: Identify top 10% high-defect vendors and reduce vendor defect rates to **< 1.5%**.
+- **Increase Inventory Velocity**: Improve Inventory Turnover Ratio from **7.5x to > 10.0x** annually.
+- **Automate Anomaly Detection**: Automatically detect 100% of statistical freight cost spikes and profit compression events.
+
+---
+
+## 4. Key Project Assumptions & Constraints
+
+### Key Project Assumptions
+- Orders represent completed customer purchases (excl. canceled draft baskets).
+- Primary reporting currency is **USD ($)**.
+- Each regional warehouse is mapped to a single geographic region.
+- Inventory snapshots are captured at regular periodic intervals.
+- Supplier quality ratings range on a standardized scale from **1.0 (Worst) to 5.0 (Best)**.
+- Fiscal Year (FY) begins on **April 1st** and ends on **March 31st**.
+
+### Project Constraints
+- **Historical Data Window**: Limited to a 3-year historical window (2023 – 2025).
+- **Batch Data Refresh**: Designed for daily/monthly batch ETL refresh rather than real-time streaming.
+- **Synthetic Data Benchmark**: Formulated on realistic synthetic enterprise data modeled after enterprise e-commerce logistics.
+
+---
+
+## 5. Risk Register & Mitigation Strategy
+
+| Risk Factor | Impact | Severity | Mitigation Strategy |
+|---|---|---|---|
+| **Supplier Disruptions** | Severe lead time delays & stockouts | HIGH | Establish multi-sourcing for Class A products & monitor Supplier Risk Index. |
+| **Transportation SLA Breaches** | Increased return rates & customer churn | HIGH | Dynamic carrier re-allocation based on rolling SLA performance metrics. |
+| **Inventory Imbalance** | Working capital lockup in overstock | MEDIUM | Implement automated EOQ and Reorder Point alerts in warehouse dashboards. |
+| **Forecast Variance** | Under/over-purchasing stock | MEDIUM | Utilize 95% confidence intervals and continuously monitor MAPE/RMSE metrics. |
+| **Demand Volatility** | Sudden demand spikes breaching safety stock | MEDIUM | Maintain dynamic safety stock buffers scaled by daily demand standard deviation. |
+
+---
+
+## 6. KPI Disclaimer
+
+> **Disclaimer**: *Target benchmark values (e.g., Gross Margin > 32%, Perfect Order Rate > 93.5%) are representative operational benchmarks established for analytical demonstration purposes and do not reflect any specific private corporation's confidential internal performance objectives.*
+
+---
+
+## 7. Master Deliverables Checklist
+
+```text
+Project Deliverables Checklist
+
+• Enterprise SQL Relational Database (Schema, DDL, Constraints, Indexes, Views)
+• Synthetic Data Pipeline (520,000+ Fact_Orders across 8 Star Schema tables)
+• Python ETL & Feature Engineering Framework (pandas, numpy, scikit-learn)
+• Advanced Time Series Forecasting Module (30/60/90/180-day horizons)
+• Power BI Semantic Model & Custom Dark Navy Glassmorphism Theme (theme.json)
+• 10-Page Interactive Web Application Dashboard (Chart.js canvas engine)
+• 30+ Advanced DAX Measures Catalog (YoY, MoM, Rolling 12M, EOQ, Window Functions)
+• Comprehensive Executive Documentation Suite (7 Enterprise Markdown Guides)
+• Data Testing & Validation Quality Assurance Report
+• Production-Grade GitHub Repository Structure
+```
